@@ -107,6 +107,16 @@ header .navbar a:hover {
   color: var(--orange);
 }
 
+header .navbar .active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: none;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
 header .icon i {
   font-size: 2rem;
   color: #fff;
@@ -604,7 +614,7 @@ header .search-bar-container label:hover {
     display: initial;
   }
 
-  header .navbar {
+  header .navbar .links {
     position: absolute;
     top: 100%;
     right: 0;
@@ -615,7 +625,8 @@ header .search-bar-container label:hover {
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
 
-  header .navbar .active {
+  header .navbar .links .active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 
